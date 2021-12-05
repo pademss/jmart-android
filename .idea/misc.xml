@@ -3,9 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Flex/AndroidStudioProjects/jmartandroid/app/src/main/res/drawable/ic_baseline_add_box_24.xml" value="0.21979166666666666" />
+        <entry key="..\:/Users/Flex/AndroidStudioProjects/jmartandroid/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.21979166666666666" />
+        <entry key="..\:/Users/Flex/AndroidStudioProjects/jmartandroid/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.21979166666666666" />
+        <entry key="..\:/Users/Flex/AndroidStudioProjects/jmartandroid/app/src/main/res/layout/activity_about_me.xml" value="0.4799999863354132" />
+        <entry key="..\:/Users/Flex/AndroidStudioProjects/jmartandroid/app/src/main/res/layout/activity_create_product.xml" value="0.2364179037174423" />
         <entry key="..\:/Users/Flex/AndroidStudioProjects/jmartandroid/app/src/main/res/layout/activity_login.xml" value="0.35820894502642775" />
-        <entry key="..\:/Users/Flex/AndroidStudioProjects/jmartandroid/app/src/main/res/layout/activity_main.xml" value="0.20364583333333333" />
+        <entry key="..\:/Users/Flex/AndroidStudioProjects/jmartandroid/app/src/main/res/layout/activity_main.xml" value="0.28861154446177845" />
         <entry key="..\:/Users/Flex/AndroidStudioProjects/jmartandroid/app/src/main/res/layout/activity_register.xml" value="0.5373134175396416" />
+        <entry key="..\:/Users/Flex/AndroidStudioProjects/jmartandroid/app/src/main/res/layout/recyclerview_row.xml" value="0.20364583333333333" />
+        <entry key="..\:/Users/Flex/AndroidStudioProjects/jmartandroid/app/src/main/res/menu/menu_main.xml" value="0.7880596790581411" />
       </map>
     </option>
   </component>
