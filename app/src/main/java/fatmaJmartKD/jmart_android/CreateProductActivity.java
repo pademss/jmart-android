@@ -1,5 +1,12 @@
 package fatmaJmartKD.jmart_android;
 
+/**
+ * Class CreateProductActivity - Mengatur jalannya halaman create product
+ *
+ * @author Fatma Putri Ramadhani
+ *
+ */
+
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -27,28 +34,31 @@ public class CreateProductActivity extends AppCompatActivity {
         setContentView(R.layout.activity_create_product);
         RequestQueue queue = Volley.newRequestQueue(this);
 
-        et_createProductName = findViewById(R.id.et_createProductName);
-        et_createProductPrice = findViewById(R.id.et_createProductPrice);
-        et_createProductWeight = findViewById(R.id.et_createProductWeight);
-        et_createProductDiscount = findViewById(R.id.et_createProductDiscount);
-        spinner_createCategory = findViewById(R.id.spinner_createCategory);
-        spinner_createShipment = findViewById(R.id.spinner_createShipment);
-        //Handle checking value of checked radiogroup buttons
+        et_createProductName = findViewById(R.id.fieldNameProduct);
+        et_createProductPrice = findViewById(R.id.fieldPriceProduct);
+        et_createProductWeight = findViewById(R.id.fieldWeightProduct);
+        et_createProductDiscount = findViewById(R.id.fieldDiscountProduct);
+        spinner_createCategory = findViewById(R.id.spinnerCategory);
+        spinner_createShipment = findViewById(R.id.spinnerShipmentPlan);
+
+        //radio button untuk condition
         radio_conditionList = findViewById(R.id.radio_conditionList);
         radio_conditionList.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 switch(checkedId){
-                    case R.id.radio_conditionNew:
+                    case R.id.rbNew:
                         newProductCondition = true;
                         break;
-                    case R.id.radio_conditionUsed:
+                    case R.id.rbUsed:
                         newProductCondition = false;
                         break;
                 }
             }
         });
-        btnCreateProduct = findViewById(R.id.btnCreateProduct);
+
+        //klik button create product
+        btnCreateProduct = findViewById(R.id.buttonCreate);
         btnCreateProduct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,7 +69,8 @@ public class CreateProductActivity extends AppCompatActivity {
                 String productDiscount = et_createProductDiscount.getText().toString();
                 String productCategory = spinner_createCategory.getSelectedItem().toString();
                 String productShipment = spinner_createShipment.getSelectedItem().toString();
-                //Convert productShipment string value into byte values to be stored
+
+                //mengubah shipment plan menjadi byte
                 switch (productShipment) {
                     case "INSTANT":
                         productShipment = String.valueOf(0);
@@ -81,6 +92,8 @@ public class CreateProductActivity extends AppCompatActivity {
                         break;
                 }
                 System.out.println(productCategory + "  " + productShipment);
+
+                //mengirimkan ke create product request
                 CreateProductRequest createProductRequest = new CreateProductRequest(accountId, productName, productWeight,
                         String.valueOf(newProductCondition), productPrice, productDiscount, productCategory, productShipment,
                         new Response.Listener<String>() {
@@ -89,7 +102,7 @@ public class CreateProductActivity extends AppCompatActivity {
                                 try {
                                     Toast.makeText(getApplicationContext(), "Create product successful", Toast.LENGTH_LONG).show();
                                     finish();
-                                    //If succesful, go back to/and reload the Main Activity
+
                                 } catch (Exception e) {
                                     e.printStackTrace();
                                     Toast.makeText(getApplicationContext(), "Create product unsuccessful, error occurred", Toast.LENGTH_LONG).show();
@@ -104,7 +117,9 @@ public class CreateProductActivity extends AppCompatActivity {
                 queue.add(createProductRequest);
             }
         });
-        btnCancelProduct = findViewById(R.id.btnCancelProduct);
+
+        //klik button untuk cancel
+        btnCancelProduct = findViewById(R.id.buttonCancelProduct);
         btnCancelProduct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

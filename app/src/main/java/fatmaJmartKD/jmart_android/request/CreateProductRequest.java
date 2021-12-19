@@ -1,5 +1,13 @@
 package fatmaJmartKD.jmart_android.request;
 
+/**
+ * Class CreateProductRequest - Melakukan request untuk membuat product baru
+ *
+ * @author Fatma Putri Ramadhani
+ *
+ */
+
+
 import androidx.annotation.Nullable;
 
 import com.android.volley.Response;

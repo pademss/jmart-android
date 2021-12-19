@@ -1,5 +1,12 @@
 package fatmaJmartKD.jmart_android.model;
 
+/**
+ * Class Product - write a description of the class here
+ *
+ * @author Fatma Putri Ramadhani
+ *
+ */
+
 public class Product extends Serializable{
 
     public int accountId;

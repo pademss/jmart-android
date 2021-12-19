@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEBEB"
+    tools:context=".ProductDetailActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="370dp"
+        android:layout_height="678dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="678dp"
+            tools:layout_editor_absoluteX="42dp"
+            tools:layout_editor_absoluteY="5dp">
+
+            <TextView
+                android:id="@+id/tvPriceProductDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="29dp"
+                android:layout_marginTop="25dp"
+                android:text="Price"
+                android:textColor="#673AB7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/categoryProductDetail" />
+
+            <TextView
+                android:id="@+id/tvCategoryProductDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="29dp"
+                android:layout_marginTop="43dp"
+                android:layout_marginEnd="290dp"
+                android:text="Category"
+                android:textColor="#673AB7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/idSellerDetail" />
+
+            <TextView
+                android:id="@+id/tvConditionProductDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="286dp"
+                android:text="Condition"
+                android:textColor="#673AB7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/weightProductDetail" />
+
+            <TextView
+                android:id="@+id/tvSellerIdDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seller ID"
+                android:textColor="#673AB7"
+                android:textColorLink="#673AB7"
+                app:layout_constraintStart_toStartOf="@+id/nameProductDetail"
+                app:layout_constraintTop_toBottomOf="@+id/nameProductDetail" />
+
+            <TextView
+                android:id="@+id/tvShipmentProductDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="287dp"
+                android:text="Shipment"
+                android:textColor="#673AB7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/conditionProductDetail" />
+
+            <TextView
+                android:id="@+id/shipmentProductDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:text="SampleShipment"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvShipmentProductDetail" />
+
+            <TextView
+                android:id="@+id/discountProductDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="SampleDiscount"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/tvDiscountProductDetail"
+                app:layout_constraintTop_toBottomOf="@+id/tvDiscountProductDetail" />
+
+            <TextView
+                android:id="@+id/tvDiscountProductDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="212dp"
+                android:layout_marginEnd="89dp"
+                android:text="Discount"
+                android:textColor="#673AB7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/nameProductDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="50dp"
+                android:maxEms="8"
+                android:text="SampleName"
+                android:textColor="#0C0C0C"
+                android:textSize="23sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/categoryProductDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="29dp"
+                android:layout_marginTop="5dp"
+                android:text="SampleCategory"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCategoryProductDetail" />
+
+            <TextView
+                android:id="@+id/priceProductDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="29dp"
+                android:layout_marginTop="5dp"
+                android:text="SamplePrice"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPriceProductDetail" />
+
+            <TextView
+                android:id="@+id/conditionProductDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="SampleCondition"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/tvConditionProductDetail"
+                app:layout_constraintTop_toBottomOf="@+id/tvConditionProductDetail" />
+
+            <TextView
+                android:id="@+id/idSellerDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SampleAccountId"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/nameProductDetail"
+                app:layout_constraintTop_toBottomOf="@+id/nameProductDetail" />
+
+            <TextView
+                android:id="@+id/weightProductDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:text="SampleWeight"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvWeightProductDetail" />
+
+            <TextView
+                android:id="@+id/tvWeightProductDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="29dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="303dp"
+                android:text="Weight"
+                android:textColor="#673AB7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/priceProductDetail" />
+
+            <Button
+                android:id="@+id/buttonPurchase"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="110dp"
+                android:text="Purchase"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/shipmentProductDetail"
+                tools:ignore="TextContrastCheck" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

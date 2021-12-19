@@ -39,7 +39,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mainTabLayout"
-        tools:visibility="visible">
+        tools:visibility="gone">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -112,19 +112,19 @@
         android:id="@+id/cv_filter"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:visibility="invisible"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mainTabLayout"
-        tools:visibility="gone">
+        tools:visibility="visible">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <EditText
-                android:id="@+id/et_productName"
+                android:id="@+id/fieldProductName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="17"
@@ -133,10 +133,10 @@
                 android:minHeight="48dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_productName" />
+                app:layout_constraintTop_toBottomOf="@+id/tvProductName" />
 
             <EditText
-                android:id="@+id/et_lowestPrice"
+                android:id="@+id/fieldLowestPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -147,10 +147,10 @@
                 android:text="0"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_lowestPrice" />
+                app:layout_constraintTop_toBottomOf="@+id/tvLowestPrice" />
 
             <EditText
-                android:id="@+id/et_highestPrice"
+                android:id="@+id/fieldHighestPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="220dp"
@@ -158,13 +158,13 @@
                 android:inputType="number"
                 android:minHeight="48dp"
                 android:text="50000"
-                app:layout_constraintBottom_toBottomOf="@+id/et_lowestPrice"
+                app:layout_constraintBottom_toBottomOf="@+id/fieldLowestPrice"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/et_lowestPrice" />
+                app:layout_constraintTop_toTopOf="@+id/fieldLowestPrice" />
 
             <TextView
-                android:id="@+id/tv_productName"
+                android:id="@+id/tvProductName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -179,13 +179,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="to"
-                app:layout_constraintBottom_toBottomOf="@+id/et_lowestPrice"
+                app:layout_constraintBottom_toBottomOf="@+id/fieldLowestPrice"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/tv_highestPrice" />
+                app:layout_constraintTop_toTopOf="@+id/tvHighestPrice" />
 
             <TextView
-                android:id="@+id/tv_lowestPrice"
+                android:id="@+id/tvLowestPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
@@ -193,10 +193,10 @@
                 android:text="Lowest Price"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/et_productName" />
+                app:layout_constraintTop_toBottomOf="@+id/fieldProductName" />
 
             <TextView
-                android:id="@+id/tv_productCondition"
+                android:id="@+id/tvProductCondition"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
@@ -204,10 +204,10 @@
                 android:text="Product Condition"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/et_lowestPrice" />
+                app:layout_constraintTop_toBottomOf="@+id/fieldLowestPrice" />
 
             <TextView
-                android:id="@+id/tv_productCategory"
+                android:id="@+id/tvProductCategory"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
@@ -215,68 +215,66 @@
                 android:text="Product Category"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_productCondition" />
+                app:layout_constraintTop_toBottomOf="@+id/tvProductCondition" />
 
             <TextView
-                android:id="@+id/tv_highestPrice"
+                android:id="@+id/tvHighestPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="180dp"
                 android:text="Highest Price"
-                app:layout_constraintBottom_toBottomOf="@+id/tv_lowestPrice"
+                app:layout_constraintBottom_toBottomOf="@+id/tvLowestPrice"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/tv_lowestPrice" />
+                app:layout_constraintTop_toTopOf="@+id/tvLowestPrice" />
 
             <CheckBox
-                android:id="@+id/cb_new"
+                android:id="@+id/cbNew"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
                 android:checked="false"
 
                 android:text="New"
-                app:layout_constraintBottom_toBottomOf="@+id/tv_productCondition"
+                app:layout_constraintBottom_toBottomOf="@+id/tvProductCondition"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/tv_productCondition"
-                app:layout_constraintTop_toTopOf="@+id/tv_productCondition" />
+                app:layout_constraintStart_toEndOf="@+id/tvProductCondition"
+                app:layout_constraintTop_toTopOf="@+id/tvProductCondition" />
 
             <CheckBox
-                android:id="@+id/cb_used"
+                android:id="@+id/cbUsed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="170dp"
                 android:text="Used"
 
-                app:layout_constraintBottom_toBottomOf="@+id/cb_new"
+                app:layout_constraintBottom_toBottomOf="@+id/cbNew"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/tv_productCondition"
-                app:layout_constraintTop_toTopOf="@+id/cb_new" />
+                app:layout_constraintStart_toEndOf="@+id/tvProductCondition"
+                app:layout_constraintTop_toTopOf="@+id/cbNew" />
 
             <Button
-                android:id="@+id/btnApply"
+                android:id="@+id/buttonApply"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="60dp"
+                android:layout_marginStart="45dp"
                 android:layout_marginBottom="32dp"
                 android:text="Apply"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
-                android:id="@+id/btnClear"
+                android:id="@+id/buttonClear"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="55dp"
-                android:layout_marginEnd="60dp"
+                android:layout_marginEnd="45dp"
                 android:text="Clear"
-                app:layout_constraintBottom_toBottomOf="@+id/btnApply"
+                app:layout_constraintBottom_toBottomOf="@+id/buttonApply"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/btnApply"
-                app:layout_constraintTop_toTopOf="@+id/btnApply" />
+                app:layout_constraintTop_toTopOf="@+id/buttonApply" />
 
             <Spinner
-                android:id="@+id/spinner_filterCategory"
+                android:id="@+id/spinnerProductCategoryFilter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="30dp"
@@ -284,9 +282,9 @@
                 android:gravity="end"
                 android:minHeight="12dp"
                 android:spinnerMode="dropdown"
-                app:layout_constraintBottom_toBottomOf="@+id/tv_productCategory"
+                app:layout_constraintBottom_toBottomOf="@+id/tvProductCategory"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/tv_productCategory" />
+                app:layout_constraintTop_toTopOf="@+id/tvProductCategory" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>

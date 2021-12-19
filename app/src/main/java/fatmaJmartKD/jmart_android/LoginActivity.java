@@ -1,5 +1,12 @@
 package fatmaJmartKD.jmart_android;
 
+/**
+ * Class LoginActivity - Mengatur jalannya halaman log in
+ *
+ * @author Fatma Putri Ramadhani
+ *
+ */
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -46,9 +53,10 @@ public class LoginActivity extends AppCompatActivity implements Response.Listene
         Button loginButton = findViewById(R.id.button);
         TextView registerLogin = findViewById(R.id.textView2);
 
-        editEmail.setText("fatma.putri@ui.ac.id");
-        editPassword.setText("Fatma123");
+//        editEmail.setText("fatma.putri@ui.ac.id");
+//        editPassword.setText("Fatma123");
 
+        //klik untuk melakukan login dan mencocokan pada database
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,13 +68,13 @@ public class LoginActivity extends AppCompatActivity implements Response.Listene
                                 try {
                                     JSONObject jsonObject = new JSONObject(response);
                                     if (jsonObject != null) {
-                                        Toast.makeText(getApplicationContext(), "Login berhasil.", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(getApplicationContext(), "Login successful.", Toast.LENGTH_SHORT).show();
                                         loggedAccount = gson.fromJson(jsonObject.toString(), Account.class);
                                         Intent loginSuccess = new Intent(LoginActivity.this, MainActivity.class);
                                         startActivity(loginSuccess);
                                     }
                                 } catch (JSONException e) {
-                                    Toast.makeText(LoginActivity.this, "Login gagal.", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(LoginActivity.this, "Login failed.", Toast.LENGTH_SHORT).show();
                                     e.printStackTrace();
                                 }
                             }
@@ -75,7 +83,7 @@ public class LoginActivity extends AppCompatActivity implements Response.Listene
                             @Override
                             public void onErrorResponse(VolleyError error) {
                                 Toast.makeText(getApplicationContext(),
-                                        "Terdapat kesalahan sistem", Toast.LENGTH_SHORT).show();
+                                        "Server error", Toast.LENGTH_SHORT).show();
                             }
                         }
                 );

@@ -1,5 +1,14 @@
 package fatmaJmartKD.jmart_android.request;
 
+/**
+ * Class LoginRequest - Melakukan request untuk masuk ke akun yang
+ * sudah didaftarkan
+ *
+ * @author Fatma Putri Ramadhani
+ *
+ */
+
+
 import java.util.HashMap;
 import java.util.Map;
 import com.android.volley.Request;

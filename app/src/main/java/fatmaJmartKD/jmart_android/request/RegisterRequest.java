@@ -1,5 +1,13 @@
 package fatmaJmartKD.jmart_android.request;
 
+/**
+ * Class RegisterRequest - Melakukan request untuk membuat akun baru
+ *
+ * @author Fatma Putri Ramadhani
+ *
+ */
+
+
 import java.util.HashMap;
 import com.android.volley.Request;
 import com.android.volley.Response;

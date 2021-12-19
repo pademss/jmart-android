@@ -1,5 +1,12 @@
 package fatmaJmartKD.jmart_android;
 
+/**
+ * Class RegisterActivity - Mengatur jalannya halaman register akun
+ *
+ * @author Fatma Putri Ramadhani
+ *
+ */
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -23,7 +30,6 @@ import fatmaJmartKD.jmart_android.request.LoginRequest;
 import fatmaJmartKD.jmart_android.request.RegisterRequest;
 
 public class RegisterActivity extends AppCompatActivity {
-    private TextView tv_loginHere;
     private EditText etEmail;
     private EditText etName;
     private EditText etPassword;
@@ -48,6 +54,7 @@ public class RegisterActivity extends AppCompatActivity {
                 String email = etEmail.getText().toString();
                 String password = etPassword.getText().toString();
 
+                //melakukan request register
                 RegisterRequest registerRequest = new RegisterRequest(name, email, password, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -75,17 +82,9 @@ public class RegisterActivity extends AppCompatActivity {
                 queue.add(registerRequest);
             }
         });
-
-//        tv_loginHere = (TextView) findViewById(R.id.tv_loginHere);
-//        tv_loginHere.setOnClickListener(new View.OnClickListener(){
-//            @Override
-//            public void onClick(View v) {
-//                openLoginActivity();
-//            }
-//        });
     }
 
-
+    //redirect ke page login
     public void openLoginActivity(){
         startActivity(new Intent(this, LoginActivity.class));
     }

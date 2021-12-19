@@ -1,5 +1,13 @@
 package fatmaJmartKD.jmart_android.request;
 
+/**
+ * Class RequestFactory - Melakukan request get dari id dan page
+ *
+ * @author Fatma Putri Ramadhani
+ *
+ */
+
+
 import java.util.HashMap;
 import java.util.Map;
 import com.android.volley.Request;

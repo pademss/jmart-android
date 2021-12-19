@@ -1,48 +1,54 @@
 package fatmaJmartKD.jmart_android;
 
+/**
+ * Class MyRecyclerViewAdapter - Mengatur jalannya halaman pada recycler view di main page
+ *
+ * @author Fatma Putri Ramadhani
+ *
+ */
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
 import fatmaJmartKD.jmart_android.model.Product;
 
-//Custom Adapter to handle Product RecycleView List
+
 public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.ViewHolder> {
 
     private List<Product> mData;
     private LayoutInflater mInflater;
     private ItemClickListener mClickListener;
 
-    // data is passed into the constructor
+
     MyRecyclerViewAdapter(Context context, List<Product> data) {
         this.mInflater = LayoutInflater.from(context);
         this.mData = data;
 
     }
 
-    // inflates the row layout from xml when needed
+
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = mInflater.inflate(R.layout.recyclerview_row, parent, false);
         return new ViewHolder(view);
     }
 
-    // binds the data to the TextView in each row
+
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         Product productName = mData.get(position);
         holder.myTextView.setText(productName.toString());
+        holder.rv_tv_productPrice.setText(String.valueOf(Math.round(productName.price * 100.00)/100.00));
     }
 
-    // total number of rows
+
     @Override
     public int getItemCount() {
         return mData.size();
@@ -53,13 +59,15 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
         notifyDataSetChanged();
     }
 
-    // stores and recycles views as they are scrolled off screen
+
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView myTextView;
+        TextView rv_tv_productPrice;
 
         ViewHolder(View itemView) {
             super(itemView);
-            myTextView = itemView.findViewById(R.id.tv_productName);
+            myTextView = itemView.findViewById(R.id.tvProductName);
+            rv_tv_productPrice = itemView.findViewById(R.id.rv_tv_productPrice);
             itemView.setOnClickListener(this);
         }
 
@@ -69,17 +77,17 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
         }
     }
 
-    // convenience method for getting data at click position
+
     String getItem(int id) {
         return mData.get(id).toString();
     }
+    int getClickedItemId(int id){ return mData.get(id).id;}
 
-    // allows clicks events to be caught
+
     void setClickListener(ItemClickListener itemClickListener) {
         this.mClickListener = itemClickListener;
     }
 
-    // parent activity will implement this method to respond to click events
     public interface ItemClickListener {
         void onItemClick(View view, int position);
 

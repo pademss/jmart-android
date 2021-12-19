@@ -1,5 +1,14 @@
 package fatmaJmartKD.jmart_android.request;
 
+/**
+ * Class RegisterStoreRequest - Melakukan request untuk membuat store baru
+ * dari sebuah akun
+ *
+ * @author Fatma Putri Ramadhani
+ *
+ */
+
+
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.toolbox.StringRequest;
